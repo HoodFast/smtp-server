@@ -21,8 +21,8 @@ let transporter = nodemailer.createTransport({
     tls: {rejectUnauthorized: false}
 })
 
-app.get('/',()=>{
-    alert('rabotaet')
+app.get('/',(req,res)=>{
+  res.send('Hello World')
 })
 app.post('/sendMessage', async function (req, res) {
 
